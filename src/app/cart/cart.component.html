@@ -28,7 +28,7 @@
                     </div>
                     <div class="d-flex justify-content-between">
                         <p class="card-text">Discount </p>
-                        <ng-template [ngIf]="priceTotal>40" [ngIfElse]="none">
+                        <ng-template [ngIf]="priceTotal>500" [ngIfElse]="none">
                             <p>{{discount.toFixed(2)}}€</p>
                         </ng-template>
                         <ng-template #none>
