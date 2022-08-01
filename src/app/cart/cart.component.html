@@ -28,16 +28,12 @@
                     </div>
                     <div class="d-flex justify-content-between">
                         <p class="card-text">Discount </p>
-                        <ng-template [ngIf]="priceTotal>500" [ngIfElse]="none">
-                            <p>{{discount.toFixed(2)}}€</p>
-                        </ng-template>
-                        <ng-template #none>
-                            <p class="card-text">0.00€</p>
-                        </ng-template>
+                        <p>{{discount.toFixed(2)}}€</p>
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">
                         <h5 class="card-title">Total</h5>
+                        <p>(incl. VAT)</p>
                         <p>{{priceFinal.toFixed(2)}}€</p>
                     </div>
                 </div>

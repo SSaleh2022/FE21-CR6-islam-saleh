@@ -44,10 +44,19 @@ export class CartComponent implements OnInit {
   constructor(private cartService:CartService, private fb:FormBuilder) { }
 
   ngOnInit(): void {
-    this.items=this.cartService.getItems()
-    this.priceTotal=this.cartService.getTotal()
-    this.discount=this.cartService.getTotal()*0.15
-    this.priceFinal=this.priceTotal-this.discount
+    this.items=this.cartService.getItems();
+    this.priceTotal=this.cartService.getTotal();
+    if(this.priceTotal >= 500){
+    this.discount=this.cartService.getTotal()*0.2;
+    }else if (this.priceTotal >= 200){
+      this.discount =this.cartService.getTotal()*0,1;
+    }else {
+      this.discount = this.cartService.getTotal();
   }
-
+    this.priceFinal=this.priceTotal-this.discount;
+  }
 }
+
+
+
+
