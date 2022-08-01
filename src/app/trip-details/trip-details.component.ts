@@ -15,7 +15,7 @@ export class tripDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private cartService:CartService) { }
   addToCart(){
-    window.alert("Great choice!");
+    window.alert("Booked!");
     this.cartService.addToCart(this.Trip1)
   }
 
