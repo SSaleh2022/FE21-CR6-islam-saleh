@@ -1,0 +1,15 @@
+.container {
+    font-family: 'Great Vibes', cursive;
+}
+
+.about-img {
+    width: 45rem;
+    height: 30rem;
+}
+
+@media screen and (max-width:1000px) {
+    .about-img {
+        width: 100%;
+        margin-bottom: 7%;
+    }
+}

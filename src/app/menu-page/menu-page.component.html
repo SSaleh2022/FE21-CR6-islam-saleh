@@ -1,0 +1,26 @@
+<h1 class="text-center">Our Trips</h1>
+<div class="container mb-4 mt-4">
+    <div class="row g-lg-5 g-md-5 g-sm-1 d-flex">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-holder" *ngFor="let trip of Trips; index as i">
+            <div class="card">
+                <img src="{{ trip.image }}" class="card-img-top" style="height: 15rem;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ trip.name }}</h5>
+                    <p class="card-text">{{ trip.description }}</p>
+                    <hr>
+                    <p class="card-text p-0">Price: {{ trip.price }} €</p>
+                    <hr>
+                    <div class="d-flex justify-content-around align-items-end p-0 btns">
+                        <ng-template [ngIf]="trip.availability==true" [ngIfElse]="none">
+                            <a routerLink="Trips/{{i}}" class="text-decoration-none text-white"><button class="btn btn-secondary">Details</button></a>
+                            <button class="btn btn-success" (click)="addToCart(i)">Book</button>
+                        </ng-template>
+                        <ng-template #none>
+                            <p class="text-danger text-center fs-4">This product is not available</p>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

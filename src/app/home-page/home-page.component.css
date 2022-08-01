@@ -1,0 +1,11 @@
+.heroimg {
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/28/21/15/space-4888643_960_720.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: bottom center;
+    font-family: 'Great Vibes', cursive;
+}
+
+.container {
+    font-family: 'Great Vibes', cursive;
+}

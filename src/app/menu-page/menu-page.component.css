@@ -1,0 +1,28 @@
+h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.container {
+    font-family: 'Great Vibes', cursive;
+}
+
+button {
+    padding: 10px;
+    margin: 0;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.card {
+    height: 30rem;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    bottom: 0;
+}
